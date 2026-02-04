@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+ios/*.xcodeproj/project.xcworkspace/xcuserdata
+ios/*.xcodeproj/xcuserdata/
+ios/DerivedData/
+ios/*.moved-aside
+ios/*.pbxuser
+ios/*.mode1v3
+ios/*.mode2v3
+ios/*.perspectivev3
+ios/**/*拼接/
+ios/**/*scons/
+ios/**/*sconsign/
+ios/build/
+ios/*.build
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/.idea/
+android/*.iml
+android/local.properties
+android/.externalNativeBuild
+android/captures/
+android/app/release/
+
+# User-specific files
+*.swp
+*.swo
+*~
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Font files (too large for git, should be added manually)
+ios/*.ttf

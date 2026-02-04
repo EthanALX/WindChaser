@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+
+/* Begin PBXBuildFile section */
+        AA0000000000000000000101 /* RunningOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RunningOSApp.swift */; };
+        AA0000000000000000000102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* ContentView.swift */; };
+        AA0000000000000000000103 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* Theme.swift */; };
+        AA0000000000000000000104 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000000000000000000602 /* MapboxMaps */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+        AA0000000000000000000001 /* RunningOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningOSApp.swift; sourceTree = "<group>"; };
+        AA0000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+        AA0000000000000000000003 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+        AA0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        AA0000000000000000000006 /* RunningOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = RunningOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        AA0000000000000000000202 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AA0000000000000000000104 /* MapboxMaps in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        AA0000000000000000000005 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                AA0000000000000000000006 /* RunningOS.app */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        AA0000000000000000000007 /* RunningOS */ = {
+            isa = PBXGroup;
+            children = (
+                AA0000000000000000000001 /* RunningOSApp.swift */,
+                AA0000000000000000000002 /* ContentView.swift */,
+                AA0000000000000000000003 /* Theme.swift */,
+            );
+            name = RunningOS;
+            sourceTree = "<group>";
+        };
+        AA0000000000000000000008 /* Main */ = {
+            isa = PBXGroup;
+            children = (
+                AA0000000000000000000007 /* RunningOS */,
+                AA0000000000000000000004 /* Info.plist */,
+                AA0000000000000000000005 /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+        AA0000000000000000000301 /* RunningOS */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = AA0000000000000000000502 /* Build configuration list for PBXNativeTarget "RunningOS" */;
+            buildPhases = (
+                AA0000000000000000000201 /* Sources */,
+                AA0000000000000000000203 /* Resources */,
+                AA0000000000000000000202 /* Frameworks */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = RunningOS;
+            packageProductDependencies = (
+                AA0000000000000000000602 /* MapboxMaps */,
+            );
+            productName = RunningOS;
+            productReference = AA0000000000000000000006 /* RunningOS.app */;
+            productType = "com.apple.product-type.application";
+        };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+        AA0000000000000000000302 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastUpgradeCheck = 1500;
+                ORGANIZATIONNAME = WindChaser;
+                TargetAttributes = {
+                    AA0000000000000000000301 = {
+                        CreatedOnToolsVersion = 15.0;
+                    };
+                };
+            };
+            buildConfigurationList = AA0000000000000000000501 /* Build configuration list for PBXProject "RunningOS" */;
+            compatibilityVersion = "Xcode 14.0";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = AA0000000000000000000008 /* Main */;
+            productRefGroup = AA0000000000000000000005 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                AA0000000000000000000301 /* RunningOS */,
+            );
+            packageReferences = (
+                AA0000000000000000000601 /* MapboxMaps */,
+            );
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+        AA0000000000000000000203 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        AA0000000000000000000201 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AA0000000000000000000101 /* RunningOSApp.swift in Sources */,
+                AA0000000000000000000102 /* ContentView.swift in Sources */,
+                AA0000000000000000000103 /* Theme.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        AA0000000000000000000401 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CODE_SIGN_STYLE = Automatic;
+                CURRENT_PROJECT_VERSION = 1;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_PREVIEWS = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+                MARKETING_VERSION = 1.0;
+                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+                PRODUCT_NAME = RunningOS;
+                SWIFT_VERSION = 5.0;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        AA0000000000000000000402 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CODE_SIGN_STYLE = Automatic;
+                CURRENT_PROJECT_VERSION = 1;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_PREVIEWS = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+                MARKETING_VERSION = 1.0;
+                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+                PRODUCT_NAME = RunningOS;
+                SWIFT_VERSION = 5.0;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
+        AA0000000000000000000403 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CODE_SIGN_STYLE = Automatic;
+                INFOPLIST_FILE = Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+                PRODUCT_NAME = RunningOS;
+                SWIFT_VERSION = 5.0;
+            };
+            name = Debug;
+        };
+        AA0000000000000000000404 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CODE_SIGN_STYLE = Automatic;
+                INFOPLIST_FILE = Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+                PRODUCT_NAME = RunningOS;
+                SWIFT_VERSION = 5.0;
+            };
+            name = Release;
+        };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+        AA0000000000000000000501 /* Build configuration list for PBXProject "RunningOS" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AA0000000000000000000401 /* Debug */,
+                AA0000000000000000000402 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        AA0000000000000000000502 /* Build configuration list for PBXNativeTarget "RunningOS" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AA0000000000000000000403 /* Debug */,
+                AA0000000000000000000404 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+        AA0000000000000000000601 /* MapboxMaps */ = {
+            isa = XCRemoteSwiftPackageReference;
+            repositoryURL = "https://github.com/mapbox/mapbox-maps-ios";
+            requirement = {
+                kind = upToNextMajorVersion;
+                minimumVersion = 11.0.0;
+            };
+        };
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+        AA0000000000000000000602 /* MapboxMaps */ = {
+            isa = XCSwiftPackageProductDependency;
+            package = AA0000000000000000000601 /* MapboxMaps */;
+            productName = MapboxMaps;
+        };
+/* End XCSwiftPackageProductDependency section */
+    };
+    rootObject = AA0000000000000000000302 /* Project object */;
+}
