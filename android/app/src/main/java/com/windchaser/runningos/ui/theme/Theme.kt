@@ -56,13 +56,12 @@ private val DarkColors = darkColorScheme(
 fun RunningOSTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = DarkColors,
-        typography = androidx.compose.material3.Typography().apply {
-            // Display font for Space Grotesk style
-            this.displayLarge = androidx.compose.material3.Typography().displayLarge.copy(
+        typography = androidx.compose.material3.Typography(
+            displayLarge = androidx.compose.ui.text.TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.W400
             )
-        },
+        ),
         content = content
     )
 }

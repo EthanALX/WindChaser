@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import com.windchaser.runningos.ui.screens.home.HomeScreen
+import com.windchaser.runningos.ui.screens.home.HomeViewModel
 import com.windchaser.runningos.ui.theme.RunningOSTheme
 import dagger.hilt.android.AndroidEntryPoint
 

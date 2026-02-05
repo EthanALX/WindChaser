@@ -1,230 +1,387 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {};
-    objectVersion = 56;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        AA0000000000000000000101 /* RunningOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RunningOSApp.swift */; };
-        AA0000000000000000000103 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* Theme.swift */; };
+		AA0000000000000000000101 /* RunningOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RunningOSApp.swift */; };
+		AA0000000000000000000103 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* DIContainer.swift */; };
+		AA0000000000000000000104 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* Theme.swift */; };
+		AA0000000000000000000105 /* RunningRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* RunningRepositoryImpl.swift */; };
+		AA0000000000000000000106 /* RunningActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* RunningActivity.swift */; };
+		AA0000000000000000000107 /* RunningRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* RunningRepository.swift */; };
+		AA0000000000000000000108 /* RunningUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000008 /* RunningUseCases.swift */; };
+		AA0000000000000000000109 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000009 /* HomeViewModel.swift */; };
+		AA0000000000000000000110 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* HomeView.swift */; };
+		AA0000000000000000000111 /* CommonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000011 /* CommonComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-        AA0000000000000000000001 /* RunningOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningOSApp.swift; sourceTree = "<group>"; };
-        AA0000000000000000000003 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-        AA0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        AA0000000000000000000006 /* RunningOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = RunningOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000001 /* RunningOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningOSApp.swift; sourceTree = "<group>"; };
+		AA0000000000000000000003 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		AA0000000000000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AA0000000000000000000005 /* RunningRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRepositoryImpl.swift; sourceTree = "<group>"; };
+		AA0000000000000000000006 /* RunningActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningActivity.swift; sourceTree = "<group>"; };
+		AA0000000000000000000007 /* RunningRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRepository.swift; sourceTree = "<group>"; };
+		AA0000000000000000000008 /* RunningUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningUseCases.swift; sourceTree = "<group>"; };
+		AA0000000000000000000009 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000010 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000011 /* CommonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponents.swift; sourceTree = "<group>"; };
+		AA0000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000014 /* RunningOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = RunningOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        AA0000000000000000000202 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		AA0000000000000000000301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        AA0000000000000000000005 /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                AA0000000000000000000006 /* RunningOS.app */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        AA0000000000000000000007 /* RunningOS */ = {
-            isa = PBXGroup;
-            children = (
-                AA0000000000000000000001 /* RunningOSApp.swift */,
-                AA0000000000000000000003 /* Theme.swift */,
-            );
-            name = RunningOS;
-            sourceTree = "<group>";
-        };
-        AA0000000000000000000008 /* Main */ = {
-            isa = PBXGroup;
-            children = (
-                AA0000000000000000000007 /* RunningOS */,
-                AA0000000000000000000004 /* Info.plist */,
-                AA0000000000000000000005 /* Products */,
-            );
-            sourceTree = "<group>";
-        };
+		AA0000000000000000000201 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000014 /* RunningOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000202 /* RunningOS */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000001 /* RunningOSApp.swift */,
+			);
+			name = RunningOS;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000203 = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000210 /* Core */,
+				AA0000000000000000000211 /* Data */,
+				AA0000000000000000000212 /* Domain */,
+				AA0000000000000000000213 /* Features */,
+				AA0000000000000000000214 /* Shared */,
+				AA0000000000000000000202 /* RunningOS */,
+				AA0000000000000000000012 /* Info.plist */,
+				AA0000000000000000000201 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000204 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000003 /* DIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000205 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000004 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000206 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000005 /* RunningRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000207 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000006 /* RunningActivity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000208 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000007 /* RunningRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000209 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000008 /* RunningUseCases.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000210 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000204 /* DI */,
+				AA0000000000000000000205 /* Theme */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000211 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000206 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000212 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000207 /* Models */,
+				AA0000000000000000000208 /* Repositories */,
+				AA0000000000000000000209 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000213 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000217 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000214 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000218 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000215 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000009 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000216 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000010 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000217 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000215 /* ViewModels */,
+				AA0000000000000000000216 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000218 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000011 /* CommonComponents.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        AA0000000000000000000301 /* RunningOS */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = AA0000000000000000000502 /* Build configuration list for PBXNativeTarget "RunningOS" */;
-            buildPhases = (
-                AA0000000000000000000201 /* Sources */,
-                AA0000000000000000000203 /* Resources */,
-                AA0000000000000000000202 /* Frameworks */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = RunningOS;
-            packageProductDependencies = (
-            );
-            productName = RunningOS;
-            productReference = AA0000000000000000000006 /* RunningOS.app */;
-            productType = "com.apple.product-type.application";
-        };
+		AA0000000000000000000401 /* RunningOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000702 /* Build configuration list for PBXNativeTarget "RunningOS" */;
+			buildPhases = (
+				AA0000000000000000000303 /* Sources */,
+				AA0000000000000000000302 /* Resources */,
+				AA0000000000000000000301 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RunningOS;
+			packageProductDependencies = (
+			);
+			productName = RunningOS;
+			productReference = AA0000000000000000000014 /* RunningOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        AA0000000000000000000302 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastUpgradeCheck = 1500;
-                ORGANIZATIONNAME = WindChaser;
-                TargetAttributes = {
-                    AA0000000000000000000301 = {
-                        CreatedOnToolsVersion = 15.0;
-                    };
-                };
-            };
-            buildConfigurationList = AA0000000000000000000501 /* Build configuration list for PBXProject "RunningOS" */;
-            compatibilityVersion = "Xcode 14.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = AA0000000000000000000008 /* Main */;
-            productRefGroup = AA0000000000000000000005 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                AA0000000000000000000301 /* RunningOS */,
-            );
-            packageReferences = (
-            );
-        };
+		AA0000000000000000000501 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1500;
+				ORGANIZATIONNAME = WindChaser;
+				TargetAttributes = {
+					AA0000000000000000000401 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA0000000000000000000701 /* Build configuration list for PBXProject "RunningOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0000000000000000000203;
+			packageReferences = (
+			);
+			productRefGroup = AA0000000000000000000201 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0000000000000000000401 /* RunningOS */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        AA0000000000000000000203 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		AA0000000000000000000302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        AA0000000000000000000201 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                AA0000000000000000000101 /* RunningOSApp.swift in Sources */,
-                AA0000000000000000000103 /* Theme.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		AA0000000000000000000303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000101 /* RunningOSApp.swift in Sources */,
+				AA0000000000000000000103 /* DIContainer.swift in Sources */,
+				AA0000000000000000000104 /* Theme.swift in Sources */,
+				AA0000000000000000000105 /* RunningRepositoryImpl.swift in Sources */,
+				AA0000000000000000000106 /* RunningActivity.swift in Sources */,
+				AA0000000000000000000107 /* RunningRepository.swift in Sources */,
+				AA0000000000000000000108 /* RunningUseCases.swift in Sources */,
+				AA0000000000000000000109 /* HomeViewModel.swift in Sources */,
+				AA0000000000000000000110 /* HomeView.swift in Sources */,
+				AA0000000000000000000111 /* CommonComponents.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-        AA0000000000000000000401 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_PREVIEWS = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
-                PRODUCT_NAME = RunningOS;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        AA0000000000000000000402 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_PREVIEWS = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
-                PRODUCT_NAME = RunningOS;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        AA0000000000000000000403 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
-                PRODUCT_NAME = RunningOS;
-                SWIFT_VERSION = 5.0;
-            };
-            name = Debug;
-        };
-        AA0000000000000000000404 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
-                PRODUCT_NAME = RunningOS;
-                SWIFT_VERSION = 5.0;
-            };
-            name = Release;
-        };
+		AA0000000000000000000601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+				PRODUCT_NAME = RunningOS;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+				PRODUCT_NAME = RunningOS;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA0000000000000000000603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+				PRODUCT_NAME = RunningOS;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AA0000000000000000000604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+				PRODUCT_NAME = RunningOS;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        AA0000000000000000000501 /* Build configuration list for PBXProject "RunningOS" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                AA0000000000000000000401 /* Debug */,
-                AA0000000000000000000402 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        AA0000000000000000000502 /* Build configuration list for PBXNativeTarget "RunningOS" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                AA0000000000000000000403 /* Debug */,
-                AA0000000000000000000404 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		AA0000000000000000000701 /* Build configuration list for PBXProject "RunningOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000601 /* Debug */,
+				AA0000000000000000000602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000702 /* Build configuration list for PBXNativeTarget "RunningOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000603 /* Debug */,
+				AA0000000000000000000604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-        /* No Swift Package Dependencies */
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-        /* No Swift Package Dependencies */
-/* End XCSwiftPackageProductDependency section */
-    };
-    rootObject = AA0000000000000000000302 /* Project object */;
+	};
+	rootObject = AA0000000000000000000501 /* Project object */;
 }

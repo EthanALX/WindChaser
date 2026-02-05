@@ -1,0 +1,20 @@
+cd /Users/alisa/Coding/wind/android
+gradle wrapper --gradle-version 8.6
+```
+
+Once you have the gradle-wrapper.jar file, place it in:
+```
+wind/android/gradle/wrapper/gradle-wrapper.jar
+```
+
+After adding the file, your gradle wrapper structure should look like:
+```
+wind/android/gradle/
+├── wrapper/
+│   ├── gradle-wrapper.jar    <-- Add this file
+│   ├── gradle-wrapper.properties
+│   └── libs/
+└── ...
+```
+
+Would you like me to help you with any of these approaches, or would you prefer to download the file manually?

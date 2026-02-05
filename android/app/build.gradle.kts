@@ -29,10 +29,23 @@ android {
         jvmTarget = "17"
     }
 
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        // Force usage of classes from search library to avoid duplicates
+        force("com.amap.api:search:6.1.0")
     }
 }
 
@@ -42,7 +55,9 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.activity:activity-compose:1.9.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.2")
 
     // Hilt Dependency Injection
@@ -66,9 +81,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.2")
 
     // 高德地图 SDK (替换 Mapbox)
-    implementation("com.amap.api:map2d:latest.integration")
-    implementation("com.amap.api:location:latest.integration")
-    implementation("com.amap.api:search:latest.integration")
+    implementation("com.amap.api:maps3d:6.1.0")
+    implementation("com.amap.api:location:4.9.0")
+    implementation("com.amap.api:search:6.1.0")
 
     // Image Loading
     implementation("io.coil-kt:coil-compose:2.6.0")
