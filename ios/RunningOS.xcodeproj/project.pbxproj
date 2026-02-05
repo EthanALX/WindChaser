@@ -7,14 +7,11 @@
 
 /* Begin PBXBuildFile section */
         AA0000000000000000000101 /* RunningOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RunningOSApp.swift */; };
-        AA0000000000000000000102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* ContentView.swift */; };
         AA0000000000000000000103 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* Theme.swift */; };
-        AA0000000000000000000104 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000000000000000000602 /* MapboxMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
         AA0000000000000000000001 /* RunningOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningOSApp.swift; sourceTree = "<group>"; };
-        AA0000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
         AA0000000000000000000003 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
         AA0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
         AA0000000000000000000006 /* RunningOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = RunningOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,7 +22,6 @@
             isa = PBXFrameworksBuildPhase;
             buildActionMask = 2147483647;
             files = (
-                AA0000000000000000000104 /* MapboxMaps in Frameworks */,
             );
             runOnlyForDeploymentPostprocessing = 0;
         };
@@ -44,7 +40,6 @@
             isa = PBXGroup;
             children = (
                 AA0000000000000000000001 /* RunningOSApp.swift */,
-                AA0000000000000000000002 /* ContentView.swift */,
                 AA0000000000000000000003 /* Theme.swift */,
             );
             name = RunningOS;
@@ -76,7 +71,6 @@
             );
             name = RunningOS;
             packageProductDependencies = (
-                AA0000000000000000000602 /* MapboxMaps */,
             );
             productName = RunningOS;
             productReference = AA0000000000000000000006 /* RunningOS.app */;
@@ -112,7 +106,6 @@
                 AA0000000000000000000301 /* RunningOS */,
             );
             packageReferences = (
-                AA0000000000000000000601 /* MapboxMaps */,
             );
         };
 /* End PBXProject section */
@@ -133,7 +126,6 @@
             buildActionMask = 2147483647;
             files = (
                 AA0000000000000000000101 /* RunningOSApp.swift in Sources */,
-                AA0000000000000000000102 /* ContentView.swift in Sources */,
                 AA0000000000000000000103 /* Theme.swift in Sources */,
             );
             runOnlyForDeploymentPostprocessing = 0;
@@ -227,22 +219,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-        AA0000000000000000000601 /* MapboxMaps */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/mapbox/mapbox-maps-ios";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 11.0.0;
-            };
-        };
+        /* No Swift Package Dependencies */
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-        AA0000000000000000000602 /* MapboxMaps */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = AA0000000000000000000601 /* MapboxMaps */;
-            productName = MapboxMaps;
-        };
+        /* No Swift Package Dependencies */
 /* End XCSwiftPackageProductDependency section */
     };
     rootObject = AA0000000000000000000302 /* Project object */;
