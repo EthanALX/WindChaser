@@ -28,8 +28,10 @@
     <array>
         <string>UIInterfaceOrientationPortrait</string>
     </array>
-    <key>MBXAccessToken</key>
-    <string>YOUR_MAPBOX_ACCESS_TOKEN</string>
+    <!-- 高德地图配置 -->
+    <!-- TODO: 在 AppDelegate.swift 中设置高德地图 API Key -->
+    <!-- 申请地址: https://console.amap.com/dev/key/app -->
+    <!-- AMapServices.shared().apiKey = "YOUR_AMAP_API_KEY" -->
     <key>UIAppFonts</key>
     <array>
         <string>SpaceGrotesk-Regular.ttf</string>

@@ -4,9 +4,8 @@ target 'RunningOS' do
   use_frameworks!
 
   # AMap SDKs
-  pod 'AMapFoundationKit'
+  pod 'AMapFoundation'
   pod 'AMap3DMap'
-  pod 'MAMapKit'
 
 end
 

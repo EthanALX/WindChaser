@@ -73,7 +73,7 @@ private fun drawRoute(aMap: AMap?, route: Route) {
         val glowOptions = PolylineOptions()
             .addAll(latLngs)
             .width(24f)
-            .color(0x999D4BF6) // 半透明紫色
+            .color(0x999D4BF6.toInt()) // 半透明紫色
             .zIndex(1f)
 
         // 绘制主路线

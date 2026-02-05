@@ -330,6 +330,46 @@ struct PulsingDot: View {
     }
 }
 
+// MARK: - Heatmap Card
+
+struct HeatmapCard: View {
+    var body: some View {
+        GlassCard(padding: EdgeInsets(top: 14, leading: 14, bottom: 14, trailing: 14), border: Color.white.opacity(0.1)) {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 8) {
+                    Image(systemName: "calendar")
+                        .foregroundColor(AppColors.primary)
+                        .font(.system(size: 14, weight: .medium))
+                    Text("Activity Heatmap")
+                        .font(AppFonts.label(12, weight: .bold))
+                        .foregroundColor(.white)
+                        .tracking(1.5)
+                }
+
+                // 模拟热力图网格
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 4), count: 12), spacing: 4) {
+                    ForEach(0..<84, id: \.self) { index in
+                        let level = Int.random(in: 0...4)
+                        RoundedRectangle(cornerRadius: 2)
+                            .fill(heatmapColor(for: level))
+                            .frame(height: 12)
+                    }
+                }
+            }
+        }
+    }
+
+    private func heatmapColor(for level: Int) -> Color {
+        switch level {
+        case 0: return AppColors.heatmapEmpty
+        case 1: return AppColors.heatmapLevel1
+        case 2: return AppColors.heatmapLevel2
+        case 3: return AppColors.heatmapLevel3
+        default: return AppColors.heatmapLevel4
+        }
+    }
+}
+
 // MARK: - Stats Row
 
 struct StatsRow: View {

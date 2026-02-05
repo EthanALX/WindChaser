@@ -1,5 +1,3 @@
-import org.gradle.authentication.http.BasicAuthentication
-
 pluginManagement {
     repositories {
         google()
@@ -19,15 +17,9 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://jitpack.io")
         }
+        // 高德地图 Maven 仓库
         maven {
-            url = uri("https://api.mapbox.com/downloads/v2/releases/maven")
-            credentials {
-                username = "mapbox"
-                password = providers.gradleProperty("MAPBOX_DOWNLOADS_TOKEN").orNull ?: ""
-            }
-            authentication {
-                create<BasicAuthentication>("basic")
-            }
+            url = uri("https://maven.aliyun.com/repository/releases")
         }
     }
 }

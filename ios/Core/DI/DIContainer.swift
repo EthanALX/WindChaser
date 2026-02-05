@@ -48,6 +48,15 @@ final class DIContainer {
         }
         return instance
     }
+
+    /// 无参数解析依赖（推断类型）
+    func resolve<T>() -> T {
+        let key = String(describing: T.self)
+        guard let instance = dependencies[key] as? T else {
+            fatalError("Dependency \(T.self) not registered")
+        }
+        return instance
+    }
 }
 
 /// App Environment ObservableObject

@@ -20,9 +20,11 @@
         android:usesCleartextTraffic="true">
 
         <!-- 高德地图 Key -->
+        <!-- TODO: 替换为实际的高德地图 API Key -->
+        <!-- 申请地址: https://console.amap.com/dev/key/app -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="YOUR_AMAP_API_KEY" />
+            android:value="470657ddd6511f515ef5b28b5d96755b" />
 
         <activity
             android:name="com.windchaser.runningos.MainActivity"
