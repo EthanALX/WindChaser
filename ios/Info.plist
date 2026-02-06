@@ -2,41 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleDevelopmentRegion</key>
-    <string>$(DEVELOPMENT_LANGUAGE)</string>
-    <key>CFBundleDisplayName</key>
-    <string>RunningOS</string>
-    <key>CFBundleExecutable</key>
-    <string>$(EXECUTABLE_NAME)</string>
-    <key>CFBundleIdentifier</key>
-    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>6.0</string>
-    <key>CFBundleName</key>
-    <string>$(PRODUCT_NAME)</string>
-    <key>CFBundlePackageType</key>
-    <string>APPL</string>
-    <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
-    <key>CFBundleVersion</key>
-    <string>1</string>
-    <key>LSRequiresIPhoneOS</key>
-    <true/>
-    <key>UILaunchScreen</key>
-    <dict/>
-    <key>UISupportedInterfaceOrientations</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-    </array>
-    <!-- 高德地图配置 -->
-    <!-- TODO: 在 AppDelegate.swift 中设置高德地图 API Key -->
-    <!-- 申请地址: https://console.amap.com/dev/key/app -->
-    <!-- AMapServices.shared().apiKey = "YOUR_AMAP_API_KEY" -->
-    <key>UIAppFonts</key>
-    <array>
-        <string>SpaceGrotesk-Regular.ttf</string>
-        <string>SpaceGrotesk-Medium.ttf</string>
-        <string>SpaceGrotesk-Bold.ttf</string>
-    </array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>RunningOS</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>应用需要访问您的位置来记录运动路线</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>应用需要访问您的位置来记录运动路线</string>
+	<!-- 高德地图隐私配置 -->
+	<!-- privacyShowUnknow: false 表示应用已处理隐私显示 -->
+	<key>com.amap.api.v2.privacyShowUnknow</key>
+	<false/>
+	<!-- privacyAgreeShow: false 表示不自动显示隐私同意界面 -->
+	<key>com.amap.api.v2.privacyAgreeShow</key>
+	<false/>
+	<!-- 用户已同意隐私政策 -->
+	<key>com.amap.privacy.agree</key>
+	<true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

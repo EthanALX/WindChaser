@@ -133,15 +133,9 @@ struct MapCard: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            // Map container with glass effect
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .fill(AppColors.surfaceTransparent)
-                .overlay(
-                    ZStack {
-                        AMapViewRepresentable(route: route)
-                        Color.black.opacity(0.6)
-                    }
-                )
+            // Map 必须直接显示，不能有任何覆盖层
+            AMapViewRepresentable(route: route)
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .overlay(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .stroke(Color.white.opacity(0.1), lineWidth: 1)
@@ -170,23 +164,60 @@ struct MapCard: View {
 
 // MARK: - AMap View Representable
 
+class AMapViewDelegate: NSObject, MAMapViewDelegate {
+    // 代理方法用于自定义路线样式
+    func mapView(_ mapView: MAMapView!, rendererFor overlay: MAOverlay!) -> MAOverlayRenderer! {
+        if overlay is MAPolyline {
+            let polylineRenderer = MAPolylineRenderer(overlay: overlay)
+            polylineRenderer?.lineWidth = 3.0
+            polylineRenderer?.strokeColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
+            return polylineRenderer
+        }
+        return nil
+    }
+}
+
 struct AMapViewRepresentable: UIViewRepresentable {
     let route: Route?
 
     func makeUIView(context: Context) -> MAMapView {
-        let mapView = MAMapView(frame: .zero)
+        // 使用足够大的帧初始化地图视图（必须在 SwiftUI 容器大小确定后再调整）
+        let mapView = MAMapView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+        
+        // 设置代理以处理路线绘制
+        mapView.delegate = context.coordinator
+        
+        // 基本配置
         mapView.showsUserLocation = false
         mapView.userTrackingMode = .none
         mapView.zoomLevel = 13.0
-
-        // 设置地图样式为暗黑模式
         mapView.mapType = .standard
+        
+        // 关键：设置初始中心坐标（北京）- 这会触发地图初始化
+        let initialCoordinate = CLLocationCoordinate2D(latitude: 39.9042, longitude: 116.4074)
+        mapView.setCenter(initialCoordinate, animated: false)
+        
+        // 手势配置
+        mapView.isZoomEnabled = true
+        mapView.isScrollEnabled = true
+        mapView.isRotateEnabled = false
+        
+        // 清空任何之前的覆盖层
+        mapView.removeOverlays(mapView.overlays)
 
         return mapView
     }
 
     func updateUIView(_ uiView: MAMapView, context: Context) {
-        guard let route = route else { return }
+        // 关键检查：确保地图已加载到窗口并完全初始化
+        guard uiView.window != nil else {
+            return
+        }
+        
+   
+        guard let route = route else { 
+            return 
+        }
 
         // 绘制路线
         let coordinates = route.coordinates.map { coord in
@@ -194,24 +225,34 @@ struct AMapViewRepresentable: UIViewRepresentable {
         }
 
         if coordinates.count > 1 {
-            // 绘制发光效果路线
-            let glowPolyline = MAPolyline(coordinates: coordinates, count: UInt(coordinates.count))
-            glowPolyline?.lineWidth = 12.0
-            glowPolyline?.strokeColor = UIColor(hex: "9D4BF6", alpha: 0.6).withAlphaComponent(0.6)
-            uiView.add(glowPolyline)
-
+            // 清除之前的覆盖层
+            let overlays = uiView.overlays ?? []
+            if !overlays.isEmpty {
+                uiView.removeOverlays(overlays)
+            }
+            
             // 绘制主路线
-            let mainPolyline = MAPolyline(coordinates: coordinates, count: UInt(coordinates.count))
-            mainPolyline?.lineWidth = 5.0
-            mainPolyline?.strokeColor = UIColor(hex: "7F0DF2")
-            uiView.add(mainPolyline)
+            var coords = coordinates
+            if let polyline = MAPolyline(coordinates: &coords, count: UInt(coordinates.count)) {
+                polyline.title = "mainRoute"
+                uiView.add(polyline)
+            }
 
-            // 移动相机到路线
+            // 异步更新中心坐标（给 SDK 足够的时间初始化）
             if let firstCoord = coordinates.first {
                 let center = CLLocationCoordinate2D(latitude: firstCoord.latitude, longitude: firstCoord.longitude)
-                uiView.setCenter(center, animated: true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    // 再次检查地图是否有效
+                    if uiView.window != nil {
+                        uiView.setCenter(center, animated: true)
+                    }
+                }
             }
         }
+    }
+    
+    func makeCoordinator() -> AMapViewDelegate {
+        AMapViewDelegate()
     }
 }
 

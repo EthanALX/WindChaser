@@ -1,14 +1,12 @@
 #!/bin/bash
-# Wrapper script to run CocoaPods with Homebrew's portable Ruby 3.3.6
+# Wrapper script to run CocoaPods with Homebrew's Ruby
 
-RUBY_PATH="/opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.6/bin/ruby"
-GEM_PATH="/opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.6/bin/gem"
-POD_PATH="/opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.6/bin/pod"
+POD_PATH="/opt/homebrew/lib/ruby/gems/4.0.0/bin/pod"
 
-# Check if the portable Ruby exists
-if [ ! -f "$RUBY_PATH" ]; then
-    echo "Error: Portable Ruby not found at $RUBY_PATH"
-    echo "Please ensure Homebrew is installed correctly."
+# Check if pod exists
+if [ ! -f "$POD_PATH" ]; then
+    echo "Error: CocoaPods not found at $POD_PATH"
+    echo "Please install CocoaPods with: /opt/homebrew/opt/ruby/bin/gem install cocoapods"
     exit 1
 fi
 

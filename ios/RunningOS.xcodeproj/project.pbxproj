@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		783B0A7A33A69F550A306460 /* Pods_RunningOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5199C2E048AFAF5AC36A6884 /* Pods_RunningOS.framework */; };
-		AA0000000000000000000101 /* RunningOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RunningOSApp.swift */; };
-		AA0000000000000000000103 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* DIContainer.swift */; };
+	783B0A7A33A69F550A306460 /* Pods_RunningOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5199C2E048AFAF5AC36A6884 /* Pods_RunningOS.framework */; };
+	AA0000000000000000000101 /* RunningOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RunningOSApp.swift */; };
+	AA0000000000000000000102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* AppDelegate.swift */; };
+	AA0000000000000000000103 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* DIContainer.swift */; };
 		AA0000000000000000000104 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* Theme.swift */; };
 		AA0000000000000000000105 /* RunningRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* RunningRepositoryImpl.swift */; };
 		AA0000000000000000000106 /* RunningActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* RunningActivity.swift */; };
@@ -22,8 +23,9 @@
 
 /* Begin PBXFileReference section */
 		5199C2E048AFAF5AC36A6884 /* Pods_RunningOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunningOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA0000000000000000000001 /* RunningOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningOSApp.swift; sourceTree = "<group>"; };
-		AA0000000000000000000003 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+	AA0000000000000000000001 /* RunningOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningOSApp.swift; sourceTree = "<group>"; };
+	AA0000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+	AA0000000000000000000003 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		AA0000000000000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AA0000000000000000000005 /* RunningRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRepositoryImpl.swift; sourceTree = "<group>"; };
 		AA0000000000000000000006 /* RunningActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningActivity.swift; sourceTree = "<group>"; };
@@ -66,14 +68,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA0000000000000000000202 /* RunningOS */ = {
-			isa = PBXGroup;
-			children = (
-				AA0000000000000000000001 /* RunningOSApp.swift */,
-			);
-			name = RunningOS;
-			sourceTree = "<group>";
-		};
+	AA0000000000000000000202 /* RunningOS */ = {
+		isa = PBXGroup;
+		children = (
+			AA0000000000000000000001 /* RunningOSApp.swift */,
+			AA0000000000000000000002 /* AppDelegate.swift */,
+		);
+		name = RunningOS;
+		sourceTree = "<group>";
+	};
 		AA0000000000000000000203 = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +223,6 @@
 				B832E3E80CC24444AC21B13C /* Pods-RunningOS.debug.xcconfig */,
 				FB5FE8B37B13CA439714B690 /* Pods-RunningOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -331,12 +333,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AA0000000000000000000303 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA0000000000000000000101 /* RunningOSApp.swift in Sources */,
-				AA0000000000000000000103 /* DIContainer.swift in Sources */,
+AA0000000000000000000303 /* Sources */ = {
+isa = PBXSourcesBuildPhase;
+buildActionMask = 2147483647;
+files = (
+AA0000000000000000000101 /* RunningOSApp.swift in Sources */,
+AA0000000000000000000102 /* AppDelegate.swift in Sources */,
+AA0000000000000000000103 /* DIContainer.swift in Sources */,
 				AA0000000000000000000104 /* Theme.swift in Sources */,
 				AA0000000000000000000105 /* RunningRepositoryImpl.swift in Sources */,
 				AA0000000000000000000106 /* RunningActivity.swift in Sources */,
@@ -389,44 +392,44 @@
 			};
 			name = Release;
 		};
-		AA0000000000000000000603 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B832E3E80CC24444AC21B13C /* Pods-RunningOS.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
-				PRODUCT_NAME = RunningOS;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
+	AA0000000000000000000603 /* Debug */ = {
+		isa = XCBuildConfiguration;
+		baseConfigurationReference = B832E3E80CC24444AC21B13C /* Pods-RunningOS.debug.xcconfig */;
+		buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			INFOPLIST_FILE = Info.plist;
+			LD_RUNPATH_SEARCH_PATHS = (
+				"$(inherited)",
+				"@executable_path/Frameworks",
+			);
+			PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+			PRODUCT_NAME = RunningOS;
+			SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			SUPPORTS_MACCATALYST = NO;
+			SWIFT_VERSION = 5.0;
+			TARGETED_DEVICE_FAMILY = 1;
 		};
-		AA0000000000000000000604 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB5FE8B37B13CA439714B690 /* Pods-RunningOS.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
-				PRODUCT_NAME = RunningOS;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
+		name = Debug;
+	};
+	AA0000000000000000000604 /* Release */ = {
+		isa = XCBuildConfiguration;
+		baseConfigurationReference = FB5FE8B37B13CA439714B690 /* Pods-RunningOS.release.xcconfig */;
+		buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			INFOPLIST_FILE = Info.plist;
+			LD_RUNPATH_SEARCH_PATHS = (
+				"$(inherited)",
+				"@executable_path/Frameworks",
+			);
+			PRODUCT_BUNDLE_IDENTIFIER = com.windchaser.runningos;
+			PRODUCT_NAME = RunningOS;
+			SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			SUPPORTS_MACCATALYST = NO;
+			SWIFT_VERSION = 5.0;
+			TARGETED_DEVICE_FAMILY = 1;
 		};
+		name = Release;
+	};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
