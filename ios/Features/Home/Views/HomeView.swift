@@ -1,5 +1,4 @@
 import SwiftUI
-import AMapFoundationKit
 
 /// 首页
 struct HomeView: View {
@@ -26,24 +25,8 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            // 配置 AMap 隐私政策
-            configureAMapPrivacy()
             viewModel.loadData()
         }
-    }
-    
-    private func configureAMapPrivacy() {
-        // 确保隐私政策标记已设置
-        // 这是备用配置，主要配置在 AppDelegate 中进行
-        let userDefaults = UserDefaults.standard
-        
-        // 标记隐私政策已被用户知晓
-        userDefaults.set(true, forKey: "com.amap.privacy.shown")
-        // 标记用户已同意
-        userDefaults.set(true, forKey: "com.amap.api.privacy.agree")
-        
-        // 确保同步写入磁盘
-        userDefaults.synchronize()
     }
 }
 

@@ -22,30 +22,22 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchScreen</key>
-	<dict/>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>应用需要访问您的位置来记录运动路线</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+ 		<key>NSAllowsArbitraryLoads</key>
+ 		<true/>
+ 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>应用需要访问您的位置来记录运动路线</string>
-	<!-- 高德地图隐私配置 -->
-	<!-- privacyShowUnknow: false 表示应用已处理隐私显示 -->
-	<key>com.amap.api.v2.privacyShowUnknow</key>
-	<false/>
-	<!-- privacyAgreeShow: false 表示不自动显示隐私同意界面 -->
-	<key>com.amap.api.v2.privacyAgreeShow</key>
-	<false/>
-	<!-- 用户已同意隐私政策 -->
-	<key>com.amap.privacy.agree</key>
-	<true/>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>应用需要访问您的位置来记录运动路线</string>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIStatusBarStyle</key>
+	<string></string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+ 		<string>UIInterfaceOrientationPortrait</string>
+ 	</array>
 </dict>
 </plist>

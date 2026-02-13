@@ -1,6 +1,4 @@
 import SwiftUI
-import AMapFoundationKit
-import MAMapKit
 
 // MARK: - Top Bar
 
@@ -125,7 +123,7 @@ struct AvatarView: View {
     }
 }
 
-// MARK: - Map Card
+// MARK: - Map Card Placeholder
 
 struct MapCard: View {
     let route: Route?
@@ -133,8 +131,29 @@ struct MapCard: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            // Map 必须直接显示，不能有任何覆盖层
-            AMapViewRepresentable(route: route)
+            // Placeholder for map view
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .fill(
+                    LinearGradient(
+                        colors: [AppColors.surface, AppColors.surface.opacity(0.5)],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .overlay(
+                    VStack(spacing: 12) {
+                        Image(systemName: "map")
+                            .font(.system(size: 40))
+                            .foregroundColor(AppColors.textTertiary)
+                        Text("Map unavailable in simulator")
+                            .font(AppFonts.label(14))
+                            .foregroundColor(AppColors.textSecondary)
+                        Text("Connect a physical device to see route visualization")
+                            .font(AppFonts.label(12))
+                            .foregroundColor(AppColors.textTertiary)
+                            .multilineTextAlignment(.center)
+                    }
+                )
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .overlay(
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -159,100 +178,6 @@ struct MapCard: View {
         }
         .frame(height: 500)
         .clipped()
-    }
-}
-
-// MARK: - AMap View Representable
-
-class AMapViewDelegate: NSObject, MAMapViewDelegate {
-    // 代理方法用于自定义路线样式
-    func mapView(_ mapView: MAMapView!, rendererFor overlay: MAOverlay!) -> MAOverlayRenderer! {
-        if overlay is MAPolyline {
-            let polylineRenderer = MAPolylineRenderer(overlay: overlay)
-            polylineRenderer?.lineWidth = 3.0
-            polylineRenderer?.strokeColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
-            return polylineRenderer
-        }
-        return nil
-    }
-}
-
-struct AMapViewRepresentable: UIViewRepresentable {
-    let route: Route?
-
-    func makeUIView(context: Context) -> MAMapView {
-        // 使用足够大的帧初始化地图视图（必须在 SwiftUI 容器大小确定后再调整）
-        let mapView = MAMapView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        
-        // 设置代理以处理路线绘制
-        mapView.delegate = context.coordinator
-        
-        // 基本配置
-        mapView.showsUserLocation = false
-        mapView.userTrackingMode = .none
-        mapView.zoomLevel = 13.0
-        mapView.mapType = .standard
-        
-        // 关键：设置初始中心坐标（北京）- 这会触发地图初始化
-        let initialCoordinate = CLLocationCoordinate2D(latitude: 39.9042, longitude: 116.4074)
-        mapView.setCenter(initialCoordinate, animated: false)
-        
-        // 手势配置
-        mapView.isZoomEnabled = true
-        mapView.isScrollEnabled = true
-        mapView.isRotateEnabled = false
-        
-        // 清空任何之前的覆盖层
-        mapView.removeOverlays(mapView.overlays)
-
-        return mapView
-    }
-
-    func updateUIView(_ uiView: MAMapView, context: Context) {
-        // 关键检查：确保地图已加载到窗口并完全初始化
-        guard uiView.window != nil else {
-            return
-        }
-        
-   
-        guard let route = route else { 
-            return 
-        }
-
-        // 绘制路线
-        let coordinates = route.coordinates.map { coord in
-            CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude)
-        }
-
-        if coordinates.count > 1 {
-            // 清除之前的覆盖层
-            let overlays = uiView.overlays ?? []
-            if !overlays.isEmpty {
-                uiView.removeOverlays(overlays)
-            }
-            
-            // 绘制主路线
-            var coords = coordinates
-            if let polyline = MAPolyline(coordinates: &coords, count: UInt(coordinates.count)) {
-                polyline.title = "mainRoute"
-                uiView.add(polyline)
-            }
-
-            // 异步更新中心坐标（给 SDK 足够的时间初始化）
-            if let firstCoord = coordinates.first {
-                let center = CLLocationCoordinate2D(latitude: firstCoord.latitude, longitude: firstCoord.longitude)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    // 再次检查地图是否有效
-                    if uiView.window != nil {
-                        uiView.setCenter(center, animated: true)
-                    }
-                }
-            }
-        }
-    }
-    
-    func makeCoordinator() -> AMapViewDelegate {
-        AMapViewDelegate()
     }
 }
 
@@ -387,7 +312,7 @@ struct HeatmapCard: View {
                         .tracking(1.5)
                 }
 
-                // 模拟热力图网格
+                // Simulated heatmap grid
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 4), count: 12), spacing: 4) {
                     ForEach(0..<84, id: \.self) { index in
                         let level = Int.random(in: 0...4)
