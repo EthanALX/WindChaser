@@ -2,6 +2,10 @@ platform :ios, '15.0'
 
 target 'RunningOS' do
   use_frameworks!
+  
+  # Core dependencies from Any Distance
+  pod 'SDWebImage', '~> 5.18'  # Image loading and caching
+  pod 'Cache', '~> 6.0'         # General caching
 end
 
 post_install do |installer|

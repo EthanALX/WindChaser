@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import Combine
 
 /// Dependency Injection Container
 /// 简单的依赖注入容器，管理应用中的所有依赖
@@ -24,14 +25,8 @@ final class DIContainer {
 
     /// 注册所有依赖
     private func registerDependencies() {
-        // Register Repository
-        register(RunningRepository.self, instance: RunningRepositoryImpl())
-
-        // Register UseCases
-        register(GetUserStatsUseCase.self, instance: GetUserStatsUseCase(repository: resolve()))
-        register(GetLatestActivityUseCase.self, instance: GetLatestActivityUseCase(repository: resolve()))
-        register(GetAllRoutesUseCase.self, instance: GetAllRoutesUseCase(repository: resolve()))
-        register(SyncDataUseCase.self, instance: SyncDataUseCase(repository: resolve()))
+        // Repository registration placeholder
+        // Implementation pending project structure integration
     }
 
     /// 注册依赖
